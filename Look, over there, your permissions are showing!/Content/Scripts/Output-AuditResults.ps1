@@ -1,0 +1,1 @@
+﻿Get-DbaUserPermission -SqlInstance PA-SQL1,PA-SQL2 -IncludePublicGuest | Export-Excel C:\Temp\PermissionsAudit.xlsx

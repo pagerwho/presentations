@@ -1,0 +1,8 @@
+Get-AdGroupMember DBA | Format-Table name, objectClass, distinguishedName
+# https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-adgroupmember?view=win10-ps
+# Remember to follow the trail of the AD groups through until you only see users.  Groups can be recursive and potentially circular in reference
+
+Get-DbaUserPermission -SqlInstance SQL1, SQL2 -IncludePublicGuest | Export-Excel C:\Temp\MyOutputFile.xlsx
+# Remember that Export-Excel can be used to generate an excel file even on a server/computer where Office is not installed
+# Get-DbaUserPermission will provide a full dump of all permissions for the users on instances in an environment
+# This command can be chained with other commands in the dbatools module to query a central managment server for this list
