@@ -1,0 +1,2 @@
+# ignore the settings folder and files for Visual Studio
+.vs/*
